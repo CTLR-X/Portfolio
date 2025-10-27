@@ -25,15 +25,15 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header & Navigation -->
-    <nav class="sticky top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-inner">
                 <!-- Logo/Name -->
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="text-xl font-bold text-teal-600">Bohdan Kuspys</span>
+                    <span class="nav-logo">Bohdan Kuspys</span>
                 </div>
                 <!-- Navigation Links -->
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                <div class="nav-links">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#contact" class="nav-link">Contact</a>
@@ -45,19 +45,19 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section id="home" class="parallax-container relative flex items-end justify-center pt-24 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32 min-h-[80vh]">
+        <section id="home" class="parallax-container hero-section">
             <!-- Parallax Background -->
             <div class="parallax-bg" style="background-image: url('images/Linkdin.jpg');"></div>
             <!-- Overlay for text readability -->
             <div class="parallax-overlay"></div>
-            <div class="parallax-content max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pb-8">
+            <div class="parallax-content hero-content">
                 <h1 class="hero-title">
                     Bohdan Kuspys
                 </h1>
                 <p class="hero-subtitle">
                     AI Intern Portfolio
                 </p>
-                <div class="mt-8 flex justify-center space-x-6">
+                <div class="social-icons">
                     <a href="mailto:Bohdankuspys@gmail.com" class="social-icon" title="Email">
                         <span class="text-2xl font-medium">&#9993;</span>
                         <span class="sr-only">Email</span>
@@ -89,10 +89,10 @@
                     </p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold text-center text-gray-900">
+                    <h3 class="skills-title">
                         Key Skills
                     </h3>
-                    <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <div class="skills-container">
                         <span class="badge-primary">ESP32</span>
                         <span class="badge-primary">C/C++</span>
                         <span class="badge-primary">N8N</span>
@@ -121,13 +121,13 @@
                     </p>
                 </div>
 
-                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="projects-grid">
                     <!-- Project 1 Card -->
                     <div class="project-card">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold text-gray-900">Smart Speaker (ESP32)</h3>
-                            <p class="mt-3 text-sm text-gray-600">A hardware/software project emphasizing embedded systems development and AI debugging.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
+                        <div class="project-card-content">
+                            <h3 class="project-title">Smart Speaker (ESP32)</h3>
+                            <p class="project-description">A hardware/software project emphasizing embedded systems development and AI debugging.</p>
+                            <div class="project-badges">
                                 <span class="badge-small">ESP32</span>
                                 <span class="badge-small">C/C++</span>
                                 <span class="badge-small">Hardware</span>
@@ -141,10 +141,10 @@
                     <!-- Project 2 Card -->
                     <div class="project-card">
                         <img src="images/Dodi AI Main.png" alt="Dodi AI Main Interface" class="w-full h-48 object-cover">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold text-gray-900">GPT Wrapper (MVP)</h3>
-                            <p class="mt-3 text-sm text-gray-600">My initial full-stack project focusing on early LLM integration and system prompt design.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
+                        <div class="project-card-content">
+                            <h3 class="project-title">GPT Wrapper (MVP)</h3>
+                            <p class="project-description">My initial full-stack project focusing on early LLM integration and system prompt design.</p>
+                            <div class="project-badges">
                                 <span class="badge-small">JavaScript</span>
                                 <span class="badge-small">Full-Stack</span>
                                 <span class="badge-small">MVP</span>
@@ -157,10 +157,10 @@
 
                     <!-- Project 3 Card -->
                     <div class="project-card">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold text-gray-900">N8N Automation for Canvas File Downloads</h3>
-                            <p class="mt-3 text-sm text-gray-600">A practical automation solution solving a daily operational friction point.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
+                        <div class="project-card-content">
+                            <h3 class="project-title">N8N Automation for Canvas File Downloads</h3>
+                            <p class="project-description">A practical automation solution solving a daily operational friction point.</p>
+                            <div class="project-badges">
                                 <span class="badge-small">N8N</span>
                                 <span class="badge-small">Automation</span>
                                 <span class="badge-small">APIs</span>
@@ -173,10 +173,10 @@
 
                     <!-- Project 4 Card -->
                     <div class="project-card">
-                        <div class="p-8">
-                            <h3 class="text-xl font-semibold text-gray-900">AI Workflow for Interview Content Extraction</h3>
-                            <p class="mt-3 text-sm text-gray-600">A solution for high-volume content analysis using LLMs for time-saving automation.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
+                        <div class="project-card-content">
+                            <h3 class="project-title">AI Workflow for Interview Content Extraction</h3>
+                            <p class="project-description">A solution for high-volume content analysis using LLMs for time-saving automation.</p>
+                            <div class="project-badges">
                                 <span class="badge-small">AI/LLM</span>
                                 <span class="badge-small">Whisper</span>
                                 <span class="badge-small">Workflow</span>
@@ -201,7 +201,7 @@
                         I'm always open to discussing new projects, opportunities, or collaboration.
                     </p>
                 </div>
-                <div class="mt-12 flex flex-col items-center space-y-6">
+                <div class="social-icons flex flex-col items-center">
                     <a href="mailto:Bohdankuspys@gmail.com" class="contact-link">
                         <span class="text-2xl">&#9993;</span>
                         <span class="text-lg">BohdanKuspys@gmail.com</span>
@@ -228,9 +228,9 @@
     <!-- Footer -->
     <footer class="bg-white border-t border-gray-200">
         <div class="footer-container py-8">
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p class="text-sm text-gray-500">Created by Bohdan Kuspys</p>
-                <div class="flex items-center space-x-4 text-sm text-gray-500">
+            <div class="footer-inner">
+            <p class="footer-text">Created by Bohdan Kuspys</p>
+                <div class="footer-links">
                     <a href="mailto:Bohdankuspys@gmail.com" class="footer-link">BohdanKuspys@gmail.com</a>
                     <span>•</span>
                     <a href="https://github.com/CTLR-X" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
