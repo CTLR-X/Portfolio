@@ -348,7 +348,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
-    padding-bottom: 6.5rem;
+    padding-bottom: 1rem;
 }
 
 @media (min-width: 640px) {
@@ -368,7 +368,7 @@ body {
 /* Hero Section Padding */
 .hero-section {
     padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -380,8 +380,25 @@ body {
 
 @media (min-width: 1024px) {
     .hero-section {
-        padding-top: 10rem;
-        padding-bottom: 8rem;
+        padding-top: 15rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* Lower the hero content inside the parallax hero */
+.hero-section .hero-content {
+    padding-top: 10rem;
+}
+
+@media (min-width: 768px) {
+    .hero-section .hero-content {
+        padding-top: 6rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-section .hero-content {
+        padding-top: 8rem;
     }
 }
 
