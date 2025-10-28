@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projects = {
         '1': {
             title: 'Smart Speaker (ESP32)',
-            tech: ['ESP32', 'C/C++', 'Bluetooth', 'Wi-Fi', 'Touchscreen Libraries', 'Gemini', 'Cursor'],
+            tech: ['ESP32', 'C/C++', 'Bluetooth', 'Wi-Fi', 'Touchscreen Libraries', 'Gemini', 'Cursor', 'API'],
             problem: 'As part of a student project, the goal was to build a Bluetooth speaker. I pushed further to create a smart speaker with a touchscreen display. Lacking prior expertise in ESP32, libraries, and low-level hardware debugging, development was fraught with memory limitation issues and core panics.',
             solution: `
                 <p>I adopted a <strong>modular development approach</strong>, isolating hardware components (screen display, touchscreen input, Bluetooth, Wi-Fi) into separate sub-projects before integrating them into a single, cohesive program.</p>
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '2': {
             title: 'AI Workflow for Interview Content Extraction',
             tech: ['OpenAI Whisper', 'Gemini', 'ChatGPT', 'Claude', 'Prompt Engineering', 'Workflow Automation'],
-            problem: 'We had a large volume of long-form interview videos. Manually reviewing and transcribing every minute to extract short, commercially viable clips was prohibitively time-consuming and inefficient.',
+            problem: 'I had a large volume of long-form interview videos. Manually reviewing and transcribing every minute to extract short, commercially viable clips was prohibitively time-consuming and inefficient.',
             solution: `
                 <p>I created a pipeline to identify the most compelling content:</p>
                 <ol class="list-decimal list-outside pl-5 space-y-2">
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ol>
             `,
             outcomeTitle: 'Outcome',
-            outcome: '<p>This workflow saved significant hours of manual review, allowing the content team to focus immediately on production rather than searching for clips.</p>',
+            outcome: '<p>This workflow saved significant hours of manual review, allowing me to focus immediately on production rather than searching for clips.</p>',
             link: null
         },
         '3': {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '4': {
             title: 'GPT Wrapper (MVP)',
             tech: ['JavaScript', 'Front-end', 'Back-end', 'DigitalOcean', 'GitHub', 'LLM APIs (GPT-3/4)'],
-            problem: 'This project, built early in the generative AI trend (with minimal JavaScript knowledge), was an MVP designed to help users write supportive and empathetic biographies of loved ones. Early LLMs lacked creativity and required specialized guidance.',
+            problem: 'This project, built a year ago in the generative AI trend (with minimal JavaScript knowledge), was an MVP designed to help users write supportive and empathetic biographies of loved ones.',
             solution: `
                 <p>The primary engineering challenge was not the front-end or basic hosting, but overcoming the <strong>limitations of the early LLM APIs</strong>. I spent significant time:</p>
                 <ul class="list-disc list-outside pl-5 space-y-2">
