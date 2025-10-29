@@ -33,14 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             outcomeTitle: 'Outcome',
             outcome: '<p>This workflow saved significant hours of manual review, allowing me to focus immediately on production rather than searching for clips.</p>',
-            link: null
+            link: null,
+            video: 'https://www.youtube.com/embed/5Ax2cUIOMM4'
         },
         '3': {
             title: 'N8N Automation for Canvas File Downloads',
             tech: ['N8N', 'Workflow Automation', 'Web Hooks', 'APIs'],
-            problem: 'The Canvas learning platform lacks a central page to access and download all files (presentations, assignments, resources) across multiple classes. Manually navigating and clicking into every single class module to download individual files was a repetitive and frustrating process.',
+            problem: 'The Canvas learning platform of my university locked down a central page to access and download all files (presentations, assignments, resources) across multiple classes. Manually navigating and clicking into every single class module to download individual files was a repetitive and frustrating process.',
             solution: `
-                <p>I developed an automation workflow using <strong>N8N</strong> (a low-code workflow automation tool). This script systematically accesses the relevant class endpoints, identifies all available file links, and downloads them in bulk to a local folder.</p>
+                <p>I developed an automation workflow using <strong>N8N</strong> (a low-code workflow automation tool). This script systematically accesses the relevant class endpoints, identifies all available file links, and downloads them in bulk to a local folders on my personal server.</p>
             `,
             outcomeTitle: 'Outcome',
             outcome: '<p>This simple automation eliminated a major point of friction, saving valuable time and ensuring all resources were immediately available locally without manual interaction.</p>',
