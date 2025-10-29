@@ -41,12 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ['N8N', 'Workflow Automation', 'Web Hooks', 'APIs'],
             problem: 'The Canvas learning platform of my university locked down a central page to access and download all files (presentations, assignments, resources) across multiple classes. Manually navigating and clicking into every single class module to download individual files was a repetitive and frustrating process.',
             solution: `
-                <p>I developed an automation workflow using <strong>N8N</strong> (a low-code workflow automation tool). This script systematically accesses the relevant class endpoints, identifies all available file links, and downloads them in bulk to a local folders on my personal server.</p>
+                <p>I developed an automation workflow using <strong>N8N</strong> (a low-code workflow automation tool). This script systematically accesses the relevant class endpoints, identifies all available file links, and downloads them in bulk to a folders on my local personal server.</p>
             `,
             outcomeTitle: 'Outcome',
             outcome: '<p>This simple automation eliminated a major point of friction, saving valuable time and ensuring all resources were immediately available locally without manual interaction.</p>',
             link: null,
-            video: 'https://www.youtube.com/embed/1k3xGWwbths'
+            video: 'https://www.youtube.com/embed/Rp-FB3mvlp8'
         },
         '4': {
             title: 'GPT Wrapper (MVP)',
