@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
             `,
             outcomeTitle: 'Outcome',
             outcome: '<p>This simple automation eliminated a major point of friction, saving valuable time and ensuring all resources were immediately available locally without manual interaction.</p>',
-            link: null
+            link: null,
+            video: 'https://www.youtube.com/embed/1k3xGWwbths'
         },
         '4': {
             title: 'GPT Wrapper (MVP)',
