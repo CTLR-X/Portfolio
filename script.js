@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '1': {
             title: 'Smart Speaker (ESP32)',
             tech: ['ESP32', 'C/C++', 'Bluetooth', 'Wi-Fi', 'Touchscreen Libraries', 'Gemini', 'Cursor', 'API'],
-            problem: 'As part of a student project, the goal was to build a Bluetooth speaker. I pushed further to create a smart speaker with a touchscreen display. Lacking prior expertise in ESP32, libraries, and low-level hardware debugging, development was fraught with memory limitation issues and core panics.',
+            problem: 'As part of a student project, the goal was to build a Bluetooth speaker. I pushed further to create a smart speaker with a touchscreen display that would display album covers, song details, and more. Lacking prior expertise in ESP32, libraries, and low-level hardware debugging, development was fraught with memory limitation issues and core panics.',
             solution: `
                 <p>I adopted a <strong>modular development approach</strong>, isolating hardware components (screen display, touchscreen input, Bluetooth, Wi-Fi) into separate sub-projects before integrating them into a single, cohesive program.</p>
                 <p>This project heavily relied on AI assistance:</p>
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tech: ['N8N', 'Workflow Automation', 'Web Hooks', 'APIs'],
             problem: 'The Canvas learning platform of my university locked down a central page to access and download all files (presentations, assignments, resources) across multiple classes. Manually navigating and clicking into every single class module to download individual files was a repetitive and frustrating process.',
             solution: `
-                <p>I developed an automation workflow using <strong>N8N</strong> (a low-code workflow automation tool). This script systematically accesses the relevant class endpoints, identifies all available file links, and downloads them in bulk to a folders on my local personal server.</p>
+                <p>I developed an automation workflow using <strong>N8N</strong> (a low-code workflow automation tool). This script systematically accesses the relevant class endpoints, identifies all available file links, and downloads them in recursively to a folders on my local personal server.</p>
             `,
             outcomeTitle: 'Outcome',
             outcome: '<p>This simple automation eliminated a major point of friction, saving valuable time and ensuring all resources were immediately available locally without manual interaction.</p>',
