@@ -231,14 +231,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Smooth Scrolling ---
     document.querySelectorAll('.nav-link').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if(targetElement) {
+            const targetHref = this.getAttribute('href');
+            const isHashLink = targetHref && targetHref.startsWith('#');
+            if (!isHashLink) {
+                return; // allow normal navigation for external/file links (e.g., PDF)
+            }
+            const targetElement = document.querySelector(targetHref);
+            if (targetElement) {
+                e.preventDefault();
                 const headerOffset = 64; // Height of the sticky nav
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
+
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: "smooth"
