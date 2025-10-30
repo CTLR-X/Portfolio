@@ -187,6 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        // Ensure modal content starts at top for every open
+        if (modalPanel) {
+            modalPanel.scrollTop = 0;
+        }
         setTimeout(() => {
             modal.classList.remove('opacity-0');
             modalPanel.classList.remove('scale-95', 'opacity-0');
