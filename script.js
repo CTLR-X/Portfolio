@@ -251,6 +251,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Mobile Menu ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        const closeMobileMenu = () => {
+            mobileMenu.classList.remove('open');
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+        };
+
+        const openMobileMenu = () => {
+            mobileMenu.classList.add('open');
+            mobileMenu.classList.remove('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'true');
+        };
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
+        });
+
+        // Close on link click and enable smooth scroll like desktop
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetHref = link.getAttribute('href');
+                const isHashLink = targetHref && targetHref.startsWith('#');
+                if (isHashLink) {
+                    const targetElement = document.querySelector(targetHref);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const headerOffset = 64;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                }
+                closeMobileMenu();
+            });
+        });
+
+        // Close if window resized to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 640) {
+                closeMobileMenu();
+            }
+        });
+    }
+
     // --- Parallax Effect ---
     const parallaxBg = document.querySelector('.parallax-bg');
     if (parallaxBg) {
