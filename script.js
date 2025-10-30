@@ -302,6 +302,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeMobileMenu();
             }
         });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            const target = e.target;
+            const clickedInsideMenu = mobileMenu.contains(target);
+            const clickedToggle = mobileMenuButton.contains(target);
+            if (!clickedInsideMenu && !clickedToggle && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close on scroll
+        window.addEventListener('scroll', () => {
+            if (mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        }, { passive: true });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
     }
 
     // --- Parallax Effect ---
