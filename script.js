@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             outcomeTitle: 'Key Achievement',
             outcome: '<p>Successfully delivered a full-stack application by leveraging early AI tools for co-development and specialized in advanced system prompt design to control model output.</p>',
             link: 'https://github.com/CTLR-X/Dodi',
-            images: ['images/Dodi AI Main.png', 'images/Dodi AI Chat.png', 'images/Bio Editor from dodi AI.png', 'images/Dodi AI Options.png']
+            images: ['images/Dodi AI Main.jpg', 'images/Dodi AI Chat.jpg', 'images/Bio Editor from dodi AI.jpg', 'images/Dodi AI Options.jpg']
         }
     };
 
