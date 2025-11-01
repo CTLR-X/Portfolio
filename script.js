@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projects = {
         '1': {
             title: 'Smart Speaker (ESP32)',
+            date: 'Mar - May 2025',
             tech: ['ESP32', 'C/C++', 'Bluetooth', 'Wi-Fi', 'Touchscreen Libraries', 'Gemini', 'Cursor', 'API'],
             problem: 'As part of a student project, the goal was to build a Bluetooth speaker. I pushed further to create a smart speaker with a touchscreen display that would display album covers, song details, and more. Lacking prior expertise in ESP32, libraries, and low-level hardware debugging, development was fraught with memory limitation issues and core panics.',
             solution: `
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '2': {
             title: 'AI Workflow for Interview Content Extraction',
+            date: 'Oct 2024',
             tech: ['OpenAI Whisper', 'Gemini', 'ChatGPT', 'Claude', 'Prompt Engineering', 'Workflow Automation'],
             problem: 'I had a large volume of long-form interview videos. Manually reviewing and transcribing every minute to extract short, commercially viable clips was prohibitively time-consuming and inefficient.',
             solution: `
@@ -38,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '3': {
             title: 'N8N Automation for Canvas File Downloads',
+            date: 'Oct 2025',
             tech: ['N8N', 'Workflow Automation', 'Web Hooks', 'APIs'],
             problem: 'The Canvas learning platform of my university locked down a central page to access and download all files (presentations, assignments, resources) across multiple classes. Manually navigating and clicking into every single class module to download individual files was a repetitive and frustrating process.',
             solution: `
@@ -50,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         '4': {
             title: 'GPT Wrapper (MVP)',
+            date: 'Apr - May 2024',
             tech: ['JavaScript', 'Front-end', 'Back-end', 'DigitalOcean', 'GitHub', 'LLM APIs (GPT-3/4)'],
             problem: 'This project, built a year ago in the generative AI trend (with minimal JavaScript knowledge), was an MVP designed to help users write supportive and empathetic biographies of loved ones.',
             solution: `
@@ -73,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const openModalBtns = document.querySelectorAll('.open-modal-btn');
 
     const modalTitle = document.getElementById('modal-title');
+    const modalDate = document.getElementById('modal-date');
     const modalTech = document.getElementById('modal-tech');
     const modalProblem = document.getElementById('modal-problem');
     const modalSolution = document.getElementById('modal-solution');
@@ -147,6 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!data) return;
 
         modalTitle.textContent = data.title;
+        if (data.date) {
+            modalDate.textContent = data.date;
+            modalDate.classList.remove('hidden');
+        } else {
+            modalDate.textContent = '';
+            modalDate.classList.add('hidden');
+        }
         modalProblem.innerHTML = data.problem;
         modalSolution.innerHTML = data.solution;
         modalOutcomeTitle.textContent = data.outcomeTitle;
